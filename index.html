@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aptech Nigeria | IT Education & Career Training</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --blue: #073b82;
+    --dark-blue: #062b60;
+    --red: #e5232e;
+    --light: #f5f7fa;
+    --text: #252d3a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #777;
+    max-width: 650px;
+    margin: auto;
+}
+
+.red-line {
+    width: 65px;
+    height: 4px;
+    background: var(--red);
+    margin: 15px auto;
+}
+
+/* TOP BAR */
+
+.top-bar {
+    background: var(--dark-blue);
+    color: white;
+    padding: 9px 0;
+    font-size: 12px;
+}
+
+.top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.top-links {
+    display: flex;
+    gap: 22px;
+}
+
+/* NAVIGATION */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.07);
+}
+
+.navbar {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blue);
+}
+
+.logo-mark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: var(--red);
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.logo-text small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 210px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    display: none;
+    list-style: none;
+    border-top: 3px solid var(--red);
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+    border: 2px solid var(--red);
+}
+
+.btn:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    background:
+    linear-gradient(90deg, rgba(4,35,83,.94), rgba(4,35,83,.55)),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 90px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(229,35,46,.95);
+    padding: 8px 17px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 23px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(35px, 5vw, 59px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 23px;
+}
+
+.hero h1 span {
+    color: #ff4b55;
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 570px;
+    color: #e4eaf5;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--blue);
+}
+
+/* STATISTICS */
+
+.stats {
+    background: var(--blue);
+    color: white;
+    padding: 32px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stat h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: white;
+}
+
+.stat p {
+    font-size: 13px;
+    color: #dce8ff;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.experience {
+    position: absolute;
+    bottom: -20px;
+    right: -15px;
+    background: var(--red);
+    color: white;
+    padding: 22px 27px;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 35px;
+    font-family: 'Poppins';
+}
+
+.about-text h2 {
+    font-family: 'Poppins';
+    font-size: 35px;
+    line-height: 1.25;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.check-list {
+    list-style: none;
+    margin: 20px 0 28px;
+}
+
+.check-list li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: var(--red);
+    font-weight: 800;
+    margin-right: 12px;
+}
+
+/* COURSES */
+
+.courses {
+    background: var(--light);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.course-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 25px;
+}
+
+.course-content h3 {
+    color: var(--blue);
+    font-family: 'Poppins';
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.course-content p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* WHY CHOOSE US */
+
+.why {
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 35px 25px;
+    border: 1px solid #eee;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.feature-card:hover {
+    border-color: var(--red);
+    box-shadow: 0 10px 30px rgba(0,0,0,.07);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #fff0f0;
+    color: var(--red);
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    font-size: 28px;
+}
+
+.feature-card h3 {
+    font-family: 'Poppins';
+    color: var(--blue);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* CAREER BANNER */
+
+.career {
+    background:
+    linear-gradient(rgba(4,38,86,.91),rgba(4,38,86,.91)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.career h2 {
+    font-family: 'Poppins';
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.career p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #d9e3f2;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+    background: var(--light);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.05);
+}
+
+.stars {
+    color: #ffad21;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 22px;
+}
+
+.student {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.student img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student h4 {
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.student small {
+    color: #999;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 55px;
+}
+
+.contact-info h2 {
+    font-family: 'Poppins';
+    color: var(--blue);
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.contact-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-item strong {
+    color: var(--blue);
+    display: block;
+}
+
+.contact-form {
+    background: var(--light);
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.contact-form h3 {
+    font-family: 'Poppins';
+    color: var(--blue);
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background: white;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: var(--blue);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #071c39;
+    color: white;
+    padding: 65px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-about p {
+    color: #aebbd0;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.footer-column h3 {
+    font-family: 'Poppins';
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #aebbd0;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding: 20px 0;
+    color: #aebbd0;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .top-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li:hover .dropdown {
+        display: none;
+    }
+
+    .nav-links .dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-top: 10px;
+    }
+
+    .nav-links li:focus-within .dropdown {
+        display: block;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .experience {
+        right: 0;
+    }
+
+    .features-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 520px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .course-grid,
+    .features-grid,
+    .testimonial-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .career h2 {
+        font-size: 28px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .top-links {
+        gap: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container top-inner">
+        <div>Welcome to Aptech Nigeria - Building Technology Careers</div>
+        <div class="top-links">
+            <span>📞 Contact Us</span>
+            <span>✉ Enquiries</span>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">
+                APTECH
+                <small>NIGERIA</small>
+            </span>
+        </a>
+
+        <input type="checkbox" id="menu" class="menu-toggle">
+        <label for="menu" class="menu-icon">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+
+            <li>
+                <a href="#about">ABOUT US ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#about">About Aptech</a></li>
+                    <li><a href="#why">Why Choose Us</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#courses">COURSES ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#courses">Software Development</a></li>
+                    <li><a href="#courses">Data Science</a></li>
+                    <li><a href="#courses">Networking</a></li>
+                    <li><a href="#courses">Cybersecurity</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#career">CAREERS</a></li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#contact" class="btn">ENQUIRE NOW</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <span class="hero-tag">LEARN • GROW • SUCCEED</span>
+
+            <h1>
+                Build Your Future
+                With <span>Technology</span>
+            </h1>
+
+            <p>
+                Develop in-demand IT skills, gain practical experience
+                and prepare yourself for exciting opportunities in
+                the ever-changing world of technology.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#courses" class="btn">EXPLORE COURSES →</a>
+                <a href="#about" class="btn-outline">DISCOVER APTECH</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="stats">
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <h2>30+</h2>
+            <p>Years of Experience</p>
+        </div>
+
+        <div class="stat">
+            <h2>IT</h2>
+            <p>Professional Training</p>
+        </div>
+
+        <div class="stat">
+            <h2>Global</h2>
+            <p>Learning Standards</p>
+        </div>
+
+        <div class="stat">
+            <h2>Career</h2>
+            <p>Focused Education</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+                 alt="Students learning together">
+            <div class="experience">
+                <h2>IT</h2>
+                <p>Education & Training</p>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <span style="color:var(--red);font-weight:700;font-size:13px;">
+                ABOUT APTECH
+            </span>
+
+            <h2>Empowering Students Through Technology Education</h2>
+
+            <p>
+                Technology is transforming the world. Developing
+                the right digital skills can open doors to exciting
+                opportunities in the global technology industry.
+            </p>
+
+            <p>
+                Explore professional IT education, practical learning
+                experiences and career-focused training programmes
+                designed to help students grow.
+            </p>
+
+            <ul class="check-list">
+                <li>Practical technology training</li>
+                <li>Industry-relevant learning</li>
+                <li>Professional development opportunities</li>
+                <li>Modern learning environment</li>
+            </ul>
+
+            <a href="#contact" class="btn">LEARN MORE</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- COURSES -->
+<section class="section courses" id="courses">
+    <div class="container">
+
+        <div class="section-title">
+            <span style="color:var(--red);font-weight:700;">OUR PROGRAMMES</span>
+            <h2>Explore Our IT Courses</h2>
+            <div class="red-line"></div>
+            <p>
+                Discover technology programmes that can help you
+                develop valuable skills for the digital world.
+            </p>
+        </div>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85"
+                     alt="Web development">
+                <div class="course-content">
+                    <h3>Software Development</h3>
+                    <p>Learn programming, software development concepts and modern application development.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=85"
+                     alt="Data analytics">
+                <div class="course-content">
+                    <h3>Data Science</h3>
+                    <p>Discover data analysis, data visualisation and the fundamentals of working with data.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=85"
+                     alt="Cybersecurity">
+                <div class="course-content">
+                    <h3>Cybersecurity</h3>
+                    <p>Explore digital security, network protection and information security fundamentals.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85"
+                     alt="Computer technology">
+                <div class="course-content">
+                    <h3>Computer Networking</h3>
+                    <p>Understand computer networks, connectivity and modern networking technologies.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=85"
+                     alt="Artificial intelligence">
+                <div class="course-content">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Explore intelligent systems, machine learning and emerging AI technologies.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=85"
+                     alt="Digital business">
+                <div class="course-content">
+                    <h3>Digital Technology</h3>
+                    <p>Build digital skills and understand technology in today's business environment.</p>
+                    <a href="#contact" class="learn-more">EXPLORE PROGRAMME →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why" id="why">
+    <div class="container">
+
+        <div class="section-title">
+            <span style="color:var(--red);font-weight:700;">WHY CHOOSE US</span>
+            <h2>Learn Skills That Matter</h2>
+            <div class="red-line"></div>
+            <p>
+                Develop your knowledge and prepare for opportunities
+                in the technology industry.
+            </p>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Professional Learning</h3>
+                <p>Structured training programmes designed to support your learning journey.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Practical Experience</h3>
+                <p>Build your understanding through hands-on technology learning.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Perspective</h3>
+                <p>Explore technology skills relevant to an increasingly connected world.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>Expert Guidance</h3>
+                <p>Learn with guidance from experienced technology educators.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Career Development</h3>
+                <p>Work towards building skills that support your professional goals.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Skill Development</h3>
+                <p>Improve your technical knowledge and confidence through learning.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CAREER BANNER -->
+<section class="career" id="career">
+    <div class="container">
+
+        <h2>Your Future Starts With The Right Skills</h2>
+
+        <p>
+            Take the next step towards your technology career.
+            Discover training opportunities and find a programme
+            that matches your ambitions.
+        </p>
+
+        <a href="#contact" class="btn">START YOUR JOURNEY →</a>
+
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+
+        <div class="section-title">
+            <span style="color:var(--red);font-weight:700;">STUDENT EXPERIENCES</span>
+            <h2>What Students Say</h2>
+            <div class="red-line"></div>
+            <p>Discover how technology education can support a student's journey.</p>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Learning technology has helped me understand programming and become more confident about my future."</p>
+                <div class="student">
+                    <img src="https://i.pravatar.cc/100?img=47" alt="Student">
+                    <div>
+                        <h4>Student One</h4>
+                        <small>Technology Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The opportunity to develop practical computer skills has been an important part of my learning journey."</p>
+                <div class="student">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Student">
+                    <div>
+                        <h4>Student Two</h4>
+                        <small>IT Learner</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Technology education has encouraged me to explore new ideas and continue developing my skills."</p>
+                <div class="student">
+                    <img src="https://i.pravatar.cc/100?img=44" alt="Student">
+                    <div>
+                        <h4>Student Three</h4>
+                        <small>Technology Learner</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container contact-grid">
+
+        <div class="contact-info">
+            <span style="color:var(--red);font-weight:700;">GET IN TOUCH</span>
+            <h2>Let's Help You Get Started</h2>
+
+            <p>
+                Interested in learning more about our programmes?
+                Send an enquiry to get more information about
+                available training opportunities.
+            </p>
+
+            <div class="contact-item">
+                <span>📍</span>
+                <div>
+                    <strong>Location</strong>
+                    <p>Aptech Nigeria</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>📞</span>
+                <div>
+                    <strong>Phone</strong>
+                    <p>Contact Aptech Nigeria for enquiries</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>✉️</span>
+                <div>
+                    <strong>Website</strong>
+                    <p>aptech.ng</p>
+                </div>
+            </div>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+
+            <h3>Send An Enquiry</h3>
+
+            <div class="form-row">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="email" placeholder="Your Email Address" required>
+            </div>
+
+            <div class="form-row">
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Select Programme</option>
+                    <option>Software Development</option>
+                    <option>Data Science</option>
+                    <option>Cybersecurity</option>
+                    <option>Networking</option>
+                    <option>Artificial Intelligence</option>
+                </select>
+            </div>
+
+            <textarea placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="btn">SUBMIT ENQUIRY →</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-about">
+                <a href="#" class="logo">
+                    <span class="logo-mark">A</span>
+                    <span class="logo-text" style="color:white;">
+                        APTECH
+                        <small style="color:#aebbd0;">NIGERIA</small>
+                    </span>
+                </a>
+
+                <p>
+                    Technology education and professional learning
+                    opportunities for students looking to develop
+                    their digital skills and knowledge.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#career">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Programmes</h3>
+                <ul>
+                    <li><a href="#courses">Software Development</a></li>
+                    <li><a href="#courses">Data Science</a></li>
+                    <li><a href="#courses">Cybersecurity</a></li>
+                    <li><a href="#courses">Networking</a></li>
+                    <li><a href="#courses">Artificial Intelligence</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Get In Touch</h3>
+                <ul>
+                    <li><a href="https://aptech.ng/">Official Website</a></li>
+                    <li><a href="#contact">Enquiries</a></li>
+                    <li><a href="#contact">Admissions</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Aptech Nigeria Inspired Website. Educational demonstration.
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
